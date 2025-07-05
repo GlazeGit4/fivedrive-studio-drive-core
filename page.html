@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FiveDrive | Utility Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="page.css" />
+</head>
+<body>
+  <header>
+    <h1>📦 FiveDrive Utility Panel</h1>
+    <a href="drive.html" class="back-link">← Return to Your Drive</a>
+  </header>
+
+  <main>
+    <section class="lists">
+      <h2>📝 Custom Lists</h2>
+      <div class="list-controls">
+        <input type="text" id="newListName" placeholder="New list name..." />
+        <button onclick="createList()">➕ Create List</button>
+        <button onclick="showStoredInfo()" class="stored-info-btn">📊 Show Stored File Info</button>
+      </div>
+      <ul id="listCollection"></ul>
+    </section>
+
+    <section class="settings">
+      <h2>⚙️ Settings</h2>
+      <label>
+        <input type="checkbox" id="extSorter" onchange="toggleExtensionSort()" />
+        Enable Auto Extension List (e.g. JPGs, TXTs)
+      </label>
+    </section>
+  </main>
+
+  <!-- 📊 Stored Info Popup -->
+  <div id="infoModal">
+    <div id="infoBox">
+      <h3>📦 Stored Files & Folders in FiveDrive</h3>
+      <div id="storedContent">
+        <pre>Loading...</pre>
+      </div>
+      <button id="closeInfo" onclick="document.getElementById('infoModal').style.display='none'">✖ Close</button>
+    </div>
+  </div>
+
+  <script src="page.js"></script>
+</body>
+</html>

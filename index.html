@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FiveDrive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://i.imgur.com/TyRsX9m.png" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="profile.css" />
+  <link rel="stylesheet" href="themes.css" />
+  <link rel="stylesheet" href="loading.css" />
+  <link rel="stylesheet" href="animations.css" />
+</head>
+<body>
+  <!-- ⏳ Splash Loading Screen -->
+  <div id="loadingScreen" class="loading-screen">
+    <img src="https://i.imgur.com/TyRsX9m.png" class="splash-logo" />
+    <h1>Starting FiveDrive...</h1>
+  </div>
+
+  <!-- 🧠 Main Interface -->
+  <header>
+    <img src="https://i.imgur.com/TyRsX9m.png" class="logo" />
+    <h1 class="welcome">Welcome to 5 daily FiveDrive</h1>
+  </header>
+
+  <!-- 🧭 Tab Navigation -->
+  <nav class="tabs">
+    <button onclick="switchTab('folders')">Folders</button>
+    <button onclick="switchTab('files')">Files</button>
+    <button onclick="switchTab('profile')">Profile</button>
+    <button onclick="switchTab('about')">About</button>
+  </nav>
+
+  <!-- 🗃️ Drive Access -->
+  <div class="nav-drive">
+    <button onclick="location.href='drive.html'" class="nav-btn drive-link">🗃️ Your Current Drive</button>
+  </div>
+
+  <!-- 📂 FOLDERS TAB -->
+  <section id="tab-folders" class="tab-content hidden">
+    <ul id="folderList">
+      <li>📁 Folder previews now live in <strong>Drive</strong></li>
+    </ul>
+  </section>
+
+  <!-- 📄 FILES TAB -->
+  <section id="tab-files" class="tab-content hidden">
+    <ul id="fileList">
+      <li>📄 File management now handled in <strong>Drive</strong></li>
+    </ul>
+  </section>
+
+  <!-- 👤 PROFILE TAB -->
+  <section id="tab-profile" class="tab-content hidden">
+    <h2>👤 Your Profile</h2>
+    <label>Username:
+      <input type="text" id="usernameInput" placeholder="Your name here..." />
+    </label>
+
+    <label>Profile Picture:
+      <input type="file" id="profilePicUpload" />
+    </label>
+
+    <label>Banner Image:
+      <input type="file" id="bannerUpload" />
+    </label>
+
+    <label>Bio:
+      <textarea id="bioInput" placeholder="Tell us something fun..."></textarea>
+    </label>
+
+    <button onclick="saveProfile()">Save Profile</button>
+
+    <div class="profile-display">
+      <img id="bannerPreview" class="banner" />
+      <img id="profilePreview" class="avatar" />
+      <p id="bioText"></p>
+    </div>
+
+    <h3>🎨 Theme</h3>
+    <select id="themeSelect" onchange="applyTheme(this.value)">
+      <option value="normal">Normal</option>
+      <option value="black">Black</option>
+      <option value="white">White</option>
+      <option value="grey">Grey</option>
+      <option value="darkblue">Dark Blue</option>
+      <option value="neonvoid">Neon Void</option>
+      <option value="custom">Custom</option>
+    </select>
+    <input type="color" id="customColorPicker" onchange="setCustomTheme()" />
+  </section>
+
+  <!-- ℹ️ ABOUT TAB -->
+  <section id="tab-about" class="tab-content hidden">
+    <p>FiveDrive is an offline, browser-powered vault built by Hunter and powered with Copilot magic ✨</p>
+    <p>No servers. No tracking. Just you and your files.</p>
+  </section>
+
+  <!-- 👤 Profile Widget -->
+  <div class="profile-widget">
+    <div class="banner-preview" id="bannerMini"></div>
+    <div class="profile-details">
+      <img id="avatarMini" />
+      <span id="usernameMini">Anonymous</span>
+    </div>
+  </div>
+
+  <!-- 🔧 Footer Credits -->
+  <footer style="margin-top: 80px; text-align: center; font-size: 0.85rem; color: #666;">
+    Made by <strong>Hunter</strong> (not Devon, he’s my dad 🧠)
+  </footer>
+
+  <!-- 📜 Scripts -->
+  <script src="animations.js"></script>
+  <script src="profile.js"></script>
+</body>
+</html>

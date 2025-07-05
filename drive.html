@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>FiveDrive | Drive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="drive.css" />
+</head>
+<body>
+  <header>
+    <h1>🗃️ Your Current Drive</h1>
+    <div>
+      <a href="index.html" class="back-link">← Return to FiveDrive</a>
+      <a href="page.html" class="back-link" style="margin-left: 15px;">⚙️ Go to FiveDrive Utility Panel</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="upload-actions">
+      <button onclick="document.getElementById('fileInput').click()">📄 Upload File</button>
+      <button onclick="document.getElementById('folderInput').click()">📂 Upload Folder</button>
+      <button onclick="createFolder()">📁 New Folder</button>
+    </div>
+
+    <input type="file" id="fileInput" multiple hidden onchange="handleFileUpload()" />
+    <input type="file" id="folderInput" webkitdirectory directory multiple hidden onchange="handleFolderUpload()" />
+
+    <section>
+      <h2>📄 Files</h2>
+      <ul id="fileList"></ul>
+    </section>
+
+    <section>
+      <h2>📁 Folders</h2>
+      <ul id="folderList"></ul>
+    </section>
+  </main>
+
+  <script src="drive.js"></script>
+</body>
+</html>

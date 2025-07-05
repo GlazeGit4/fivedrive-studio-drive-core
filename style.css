@@ -1,0 +1,127 @@
+/* FiveDrive Styling */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #111;
+  color: #f0f0f0;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+}
+
+.welcome {
+  font-size: 1.4rem;
+  margin: 0;
+  color: #33d9b2;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+.top-controls {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  margin: 20px 0;
+}
+
+.new-btn-container {
+  position: relative;
+}
+
+.popup-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 100;
+}
+
+.popup-menu button {
+  display: block;
+  width: 100%;
+  background: none;
+  color: #fff;
+  padding: 8px 12px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-menu button:hover {
+  background-color: #333;
+}
+
+.hidden {
+  display: none;
+}
+
+.file-list h2 {
+  margin-top: 30px;
+}
+
+ul#fileList {
+  list-style: none;
+  padding: 0;
+}
+
+ul#fileList li {
+  background: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px;
+  margin: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul#fileList button {
+  background-color: #485460;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+ul#fileList button:hover {
+  background-color: #5c5c5c;
+}
+
+.file-converter {
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+}
+
+.file-converter input,
+.file-converter select,
+.file-converter button {
+  margin: 8px;
+  padding: 10px;
+}
+
+.file-converter button {
+  background-color: #218c74;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

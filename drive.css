@@ -1,0 +1,94 @@
+body {
+  background-color: #141414;
+  color: #f1f1f1;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #444;
+  padding-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+  color: #33d9b2;
+}
+
+a.back-link {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.upload-actions {
+  margin: 30px 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.upload-actions button {
+  background: #00b894;
+  border: none;
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #000;
+}
+
+.upload-actions button:hover {
+  background: #01a67a;
+}
+
+section {
+  margin-top: 25px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: #1f1f1f;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li span.name {
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+ul li button {
+  margin-left: 8px;
+  padding: 4px 10px;
+  background: #555;
+  border: none;
+  color: #eee;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+ul li button:hover {
+  background: #777;
+}
+
+.folder-link {
+  color: #72f8ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.folder-link:hover {
+  color: #4ee2ff;
+}
